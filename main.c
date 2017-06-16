@@ -60,9 +60,9 @@ static ble_nus_t m_nus;
 
 // Defines
 // Low frequency clock source to be used by the SoftDevice
-#define NRF_CLOCK_LFCLKSRC      {.source        = NRF_CLOCK_LF_SRC_SYNTH,            \
-                                 .rc_ctiv       = 0,                                \
-                                 .rc_temp_ctiv  = 0,                                \
+#define NRF_CLOCK_LFCLKSRC      {.source        = NRF_CLOCK_LF_SRC_RC,            \
+                                 .rc_ctiv       = 16,                                \
+                                 .rc_temp_ctiv  = 2,                                \
                                  .xtal_accuracy = NRF_CLOCK_LF_XTAL_ACCURACY_20_PPM}
 
 #define CUSTOM_UUID { 0xFF, 0xEE, 0xDD, 0xCC, 0xBB, 0xAA, 0x99, 0x88, 0x77, 0x66, 0x55, 0x44, 0x33, 0x22, 0x11, 0x00 }
@@ -751,6 +751,29 @@ void ble_initialize(void)
 	advertising_start();
 }
 
+APP_TIMER_DEF(debug_timer);
+
+static void debug_timer_timeout_handler(void * p_context)
+{
+	NRF_LOG_INFO("xmitting\r\n");
+	//initializeLeds();
+	renderLeds();
+}
+
+void debug_timer_stuff(void)
+{
+	app_timer_create(&debug_timer, APP_TIMER_MODE_REPEATED, debug_timer_timeout_handler);
+	app_timer_start(debug_timer, APP_TIMER_TICKS(1000), NULL);
+}
+
+#include "nrf_gpio.h"
+
+void stupid_gpio(void)
+{
+	nrf_gpio_cfg_output(LED_POWER_ENABLE_PIN);
+	nrf_gpio_pin_set(LED_POWER_ENABLE_PIN);
+}
+
 int main(void)
 {
 	log_initialize();
@@ -759,11 +782,14 @@ int main(void)
 	
 	//gpiote_initialize();
 	app_button_initialize();
+	stupid_gpio();
 	ble_initialize();
 	
 	//mic_initialize();
 	initializeLeds();
-	renderLeds();
+	//renderLeds();
+	
+	debug_timer_stuff();
 	
 	NRF_LOG_INFO("Start!\r\n");
 	for (;;)

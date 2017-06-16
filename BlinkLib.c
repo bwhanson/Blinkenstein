@@ -27,8 +27,11 @@ void initializeLeds(void)
 
 void renderLeds(void)
 {
-	led_1_array[0].red = 255;
-	
-	i2s_ws2812b_drive_xfer(led_1_array, NUM_LEDS, LED_DATA_1_PIN);
+	for (int i = 0; i < 10; i++)
+	{
+		led_1_array[i].red = 255;
+	}
+	//i2s_ws2812b_drive_xfer(led_1_array, NUM_LEDS, LED_DATA_1_PIN);
+	i2s_ws2812b_drive_xfer(led_1_array, NUM_LEDS, LED_DATA_2_PIN);
 }
 

@@ -10,7 +10,7 @@
       <TargetName>nRF52832-Blinkenstein</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>
@@ -333,7 +333,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>NRF52 NRF52832 NRF52832_XXAA NRF52_PAN_12 NRF52_PAN_15 NRF52_PAN_20 NRF52_PAN_31 NRF52_PAN_36 NRF52_PAN_51 NRF52_PAN_54 NRF52_PAN_55 NRF52_PAN_58 NRF52_PAN_64 NRF52_PAN_74 BLE_STACK_SUPPORT_REQD NRF_SD_BLE_API_VERSION=4 S132 SOFTDEVICE_PRESENT SVC_INTERFACE_CALL_AS_NORMAL_FUNCTION NRF_DFU_DEBUG_VERSION NRF_DFU_SETTINGS_VERSION=1 ARM_MATH_CM4 DEBUG</Define>
+              <Define>NRF52 NRF52832 NRF52832_XXAA NRF52_PAN_12 NRF52_PAN_15 NRF52_PAN_20 NRF52_PAN_31 NRF52_PAN_36 NRF52_PAN_51 NRF52_PAN_54 NRF52_PAN_55 NRF52_PAN_58 NRF52_PAN_64 NRF52_PAN_74 BLE_STACK_SUPPORT_REQD NRF_SD_BLE_API_VERSION=4 S132 SOFTDEVICE_PRESENT SVC_INTERFACE_CALL_AS_NORMAL_FUNCTION NRF_DFU_DEBUG_VERSION NRF_DFU_SETTINGS_VERSION=1 ARM_MATH_CM4 DEBUG  CONFIG_GPIO_AS_PINRESET</Define>
               <Undefine></Undefine>
               <IncludePath>.;.\;.\BLE;.\BLE\ble_advertising;.\BLE\ble_db_discovery;.\BLE\ble_dtm;.\BLE\ble_racp;.\BLE\ble_radio_notification;.\BLE\ble_services;.\BLE\common;.\BLE\nrf_ble_gatt;.\BLE\nrf_ble_qwr;.\BLE\peer_manager;.\Config;.\Device;.\Ext_Drivers;.\nRF_Drivers;.\nRF_Drivers\clock;.\nRF_Drivers\common;.\nRF_Drivers\delay;.\nRF_Drivers\gpiote;.\nRF_Drivers\hal;.\nRF_Drivers\i2s;.\nRF_Drivers\pdm;.\nRF_Drivers\ppi;.\nRF_Drivers\systick;.\nRF_Drivers\timer;.\nRF_Drivers\twi_master;.\nRF_Drivers\uart;.\nRF_Libraries\atomic;.\nRF_Libraries\atomic_fifo;.\nRF_Libraries\balloc;.\nRF_Libraries\bootloader;.\nRF_Libraries\button;.\nRF_Libraries\crc16;.\nRF_Libraries\crc32;.\nRF_Libraries\experimental_section_vars;.\nRF_Libraries\fds;.\nRF_Libraries\fstorage;.\nRF_Libraries\gpiote;.\nRF_Libraries\log;.\nRF_Libraries\log\src;.\nRF_Libraries\queue;.\nRF_Libraries\scheduler;.\nRF_Libraries\svc;.\nRF_Libraries\strerror;.\nRF_Libraries\timer;.\nRF_Libraries\twi;.\nRF_Libraries\uart;.\nRF_Libraries\util;.\SoftDevice;.\SoftDevice\nrf52;.\SoftDevice\softdevice_handler;.\Ext_Libraries;.\Ext_Libraries\segger_rtt;.\Ext_Drivers;.\Ext_Drivers\LIS3DH;.\Ext_Drivers\ws2812b;.\BLE\ble_services\ble_nus</IncludePath>
             </VariousControls>

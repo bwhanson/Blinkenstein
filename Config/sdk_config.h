@@ -2280,7 +2280,7 @@
 // <e> I2S_CONFIG_LOG_ENABLED - Enables logging in the module.
 //==========================================================
 #ifndef I2S_CONFIG_LOG_ENABLED
-#define I2S_CONFIG_LOG_ENABLED 1
+#define I2S_CONFIG_LOG_ENABLED 0
 #endif
 #if  I2S_CONFIG_LOG_ENABLED
 // <o> I2S_CONFIG_LOG_LEVEL  - Default Severity level
