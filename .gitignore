@@ -1,0 +1,10 @@
+*.[oad]
+*.crf
+*.lst
+*.TMP
+*.bak
+/Objects/**
+/Listings/**
+/JLinkLog.txt
+*.hex
+*.zip

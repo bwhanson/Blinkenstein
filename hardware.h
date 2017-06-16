@@ -1,0 +1,21 @@
+#define ACCEL_INT1_PIN 30
+#define ACCEL_INT2_PIN 31
+
+#define I2C_SDA_PIN 19
+#define I2C_SCL_PIN 17
+
+#define FLASH_WP_PIN 0
+#define FLASH_MISO_PIN 1
+#define FLASH_CS_PIN 2
+#define FLASH_MOSI_PIN 3
+#define FLASH_CLK_PIN 4
+#define FLASH_RESET_PIN 5
+
+#define MIC_CLK_PIN 7
+#define MIC_DATA_PIN 8
+
+#define LED_POWER_ENABLE_PIN 14
+#define LED_DATA_1_PIN 23
+#define LED_DATA_2_PIN 24
+
+#define BUTTON_PIN 21
